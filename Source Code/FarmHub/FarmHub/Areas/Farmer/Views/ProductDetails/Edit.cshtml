@@ -1,0 +1,244 @@
+﻿@model Model.EF.PRODUCT_DETAIL
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Farmer/Views/Shared/_Layouts.cshtml";
+}
+
+<head>
+    <title>Edit Product Details</title>
+</head>
+
+<div style="padding:30px">
+    <!--div này để căn lề khung TRENDING không bị dính lên trên cùng-->
+</div>
+
+<!-- Start Reservation section -->
+<section id="mu-reservation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="mu-reservation-area">
+                            <div class="mu-title">
+                                <span class="mu-subtitle">Nông Sản</span>
+                                <h2>CHỈNH SỬA THÔNG TIN</h2>
+                                <i style="margin-right: -9px" class="fas fa-tractor"></i>
+                                <span class="mu-title-bar"></span>
+                            </div>
+                            @using (Html.BeginForm("Edit", "ProductDetails", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                <div class="mu-reservation-content">
+                                    <form class="mu-reservation-form">
+                                        @Html.AntiForgeryToken()
+                                        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger", @role = "alert", @style = "text-align: center" })
+                                        <div class="row">
+
+                                            @Html.HiddenFor(model => model.Id_ProductDetail)
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select id="comboboxProduct" title="Tên nông sản" class="form-control" name="Id_Product" required="" oninvalid="this.setCustomValidity('Thông tin này không được để trống')" oninput="this.setCustomValidity('')">
+                                                        <option value="" selected disabled hidden>
+                                                            Chọn nông sản
+                                                        </option>
+                                                        @foreach (var item in ViewBag.PRODUCTS)
+                                                        {
+                                                            if (item.Id_Product == Model.Id_Product)
+                                                            {
+                                                                <option selected value="@item.Id_Product">
+                                                                    @item.Name_Product
+                                                                </option>
+                                                            }
+                                                            else
+                                                            {
+                                                                <option value="@item.Id_Product">
+                                                                    @item.Name_Product
+                                                                </option>
+                                                            }
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.DropDownList("FarmIDForPD", null, htmlAttributes: new { @class = "form-control", @disabled = "disabled", @title = "Tên nông trại" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select id="comboboxSeed" title="Tên giống" class="form-control" name="Id_Seed" required="" oninvalid="this.setCustomValidity('Thông tin này không được để trống')" oninput="this.setCustomValidity('')">
+                                                        @foreach (var item in ViewBag.SEEDS)
+                                                        {
+                                                            if (item.Id_Seed == Model.Id_Seed)
+                                                            {
+                                                                <option selected value="@item.Id_Seed">
+                                                                    @item.Name_Seed
+                                                                </option>
+                                                            }
+                                                            else
+                                                            {
+                                                                if (item.Id_Product == Model.Id_Product)
+                                                                {
+                                                                    <option value="@item.Id_Seed">
+                                                                        @item.Name_Seed
+                                                                    </option>
+                                                                }
+                                                            }
+                                                        }
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control checkGeography" placeholder="Thổ nhưỡng" title="Thổ nhưỡng" name="Geography_Location" value="@Model.Geography_Location" />
+                                                    @Html.ValidationMessageFor(model => model.Geography_Location, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control checkNameCrop" placeholder="Tên vụ mùa" title="Tên vụ mùa" name="Name_Crop" required="" oninvalid="this.setCustomValidity('Thông tin này không được để trống')" oninput="this.setCustomValidity('')" value="@Model.Name_Crop" />
+                                                    @Html.ValidationMessageFor(model => model.Name_Crop, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" id="Harvest_Time" class="form-control" placeholder="Thời điểm thu hoạch" title="Thời điểm thu hoạch" name="Harvest_Time" required value="@Model.Harvest_Time" />
+                                                    @Html.ValidationMessageFor(model => model.Harvest_Time, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="number" class="form-control" placeholder="Sản lượng dự kiến" title="Sản lượng dự kiến" name="Quantity_Expected" onkeypress='return event.charCode != 69 && event.charCode != 101 && event.charCode != 45 && event.charCode != 43 && event.charCode != 46' required="" oninvalid="this.setCustomValidity('Thông tin này không được để trống')" oninput="this.setCustomValidity('')" value="@Model.Quantity_Expected">
+                                                @Html.ValidationMessageFor(model => model.Quantity_Expected, "", new { @class = "text-danger" })
+                                                <div class="form-group">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <h4><span class="label label-success">Đang Hoạt Động</span></h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="anhSanPham" style="color:aliceblue">Ảnh sản phẩm</label>
+                                                    <input type="file" class="form-control-file" onchange="readURL(this);" id="anhSanPham" name="ImageFile" style="color:aliceblue">
+                                                    <img style="max-width:180px; max-height:180px" id="blah" src="http://placehold.it/180" alt="your image" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <center>
+                                            <button type="submit" class="mu-readmore-btn">Cập Nhật</button>
+
+                                            <button type="button" onclick="location.href = '@Url.Action("Index","ProductDetails", new { id = Model.FARM.Id_Farm })'" class="mu-readmore-btn">Quay Về</button>
+                                        </center>
+
+                                    </form>
+                                </div>
+
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Reservation section -->
+<!--S.Scripts For Image-->
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<!--E.Scripts For Image-->
+
+<script>
+
+    function keyispressed(e) {
+        var charval = String.fromCharCode(e.keyCode);
+        var charE = "e";
+        if (isNaN(charval)) {
+            return false;
+        }
+        else if (isNaN(charE)) {
+            return false;
+        }
+        return true;
+    }
+
+    $(document).ready(function () {
+        var elem = $(".limitSeven");
+        if (elem) {
+            elem.keydown(function () {
+                if (elem.val().length > 7)
+                    elem.val(elem.val().substr(0, 7));
+            });
+        }
+    });
+
+    $(document).ready(function () {
+        var elem = $(".checkGeography");
+        if (elem) {
+            elem.keydown(function () {
+                if (elem.val().length > 30)
+                    elem.val(elem.val().substr(0, 30));
+            });
+        }
+    });
+
+    $(document).ready(function () {
+        var elem = $(".checkNameCrop");
+        if (elem) {
+            elem.keydown(function () {
+                if (elem.val().length > 20)
+                    elem.val(elem.val().substr(0, 20));
+            });
+        }
+    });
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#comboboxProduct').on('change', function () {
+            var productID = $('#comboboxProduct').val();
+            $.ajax({
+                type: 'GET',
+                data: { productID: productID },
+                url: '@Url.Action("LoadSeeds", "ProductDetails")',
+                success: function (result) {
+                    var s = '';
+                    for (var i = 0; i < result.length; i++) {
+                        if (result[i].Id_Seed == @Model.Id_Seed) {
+                            s += '<option selected value="' + result[i].Id_Seed + '">' + result[i].Name_Seed + '</option>';
+                        }
+                        else {
+                            s += '<option value="' + result[i].Id_Seed + '">' + result[i].Name_Seed + '</option>';
+                        }
+                    }
+                    $('#comboboxSeed').html(s);
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#Harvest_Time").datepicker();
+    });
+</script>
