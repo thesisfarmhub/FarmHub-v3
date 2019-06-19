@@ -3051,6 +3051,7 @@
     <Content Include="Areas\Farmer\Views\ProductDetails\Details.cshtml" />
     <Content Include="Areas\Farmer\Views\ProductDetails\Edit.cshtml" />
     <Content Include="Areas\Farmer\Views\ProductDetails\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Seed\Details.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\Chart.min.js" />

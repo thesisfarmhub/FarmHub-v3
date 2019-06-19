@@ -99,6 +99,12 @@ namespace FarmHub.Areas.Admin.Controllers
             }
         }
 
+        public ActionResult Details(int id)
+        {
+            var seedModel = dao.Details(id);
+            return View(seedModel);
+        }
+
         [HttpDelete]
         public ActionResult Delete(int id)
         {

@@ -4,7 +4,7 @@
 
 @{
     ViewBag.Title = "Account";
-    Layout = "~/Views/Shared/_Layouts.cshtml";
+    Layout = "~/Areas/Farmer/Views/Shared/_Layouts.cshtml";
 }
 
 <head>
@@ -17,7 +17,7 @@
 </div>
 
 <!-- Start Reservation section -->
-<section id="mu-reservation" style="background-color:#808080">
+<section id="mu-reservation">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -107,6 +107,8 @@
 
                                         <center>
                                             <button type="submit" class="mu-readmore-btn">Cập Nhật</button>
+
+                                            <button type="button" onclick="history.go(-1)" class="mu-readmore-btn">Quay Về</button>
                                         </center>
 
                                     </form>

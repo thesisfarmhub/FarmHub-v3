@@ -65,12 +65,12 @@ namespace FarmHub.Controllers
                     }
                     else if (user.USER_KIND.Id_UserKind == 3)
                     {
-                        return RedirectToAction("index", "User", new { area = "Admin" });
+                        return RedirectToAction("UserIndex", "User", new { area = "Admin" });
                     }
                     else if (user.USER_KIND.Id_UserKind == 4)
                     {
                         Session["IsAdmin"] = true;
-                        return RedirectToAction("index", "User", new { area = "Admin" });
+                        return RedirectToAction("UserIndex", "User", new { area = "Admin" });
                     }
                     else
                     {
