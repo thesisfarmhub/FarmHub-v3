@@ -1,0 +1,106 @@
+﻿@model Model.DTO.Common.AnalysistDTO
+@if(Session["TraderId"] != null){
+    ViewBag.Title = "TraderAnalysisIndex";
+    Layout = "~/Views/Shared/_Layouts.cshtml";
+}
+else
+{
+    ViewBag.Title = "TraderAnalysisIndex";
+    Layout = "~/Areas/Farmer/Views/Shared/_Layouts.cshtml";
+}
+<head>
+    <link href="~/Assets/common/CSS/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Assets/trader/CSS/Offer.css" rel="stylesheet" />
+    <link href="~/Assets/common/CSS/BeautifulButton.css" rel="stylesheet" />
+    <link href="~/Assets/common/CSS/bootstrap-select.css" rel="stylesheet" />
+    <link href="~/Assets/common/CSS/Analysist.css" rel="stylesheet" />
+
+    <script src="~/Assets/common/JS/jquery-ui.js"></script>
+    <script src="~/Assets/trader/JS/Transaction.js"></script>
+    <script src="~/Assets/trader/JS/AdvancedBtn.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script src="~/Assets/common/JS/bootstrap-select.js"></script>
+    <script src="~/Assets/common/JS/Analysist.js"></script>
+</head>
+
+<div class="row" style="padding-left:12px;">
+    <div class="col-md-2">
+
+        <label>Xem biểu đồ theo sản phẩm:</label>
+        <br />
+        <select class="selectpicker " id="product" title="Chọn nông sản" data-live-search="true" data-live-search-placeholder="Tìm Kiếm" data-actions-box="true">
+
+            @foreach (var item in Model.productList)
+            {
+                <option value="@item.productid">@item.productName</option>
+            }
+
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label>Loại thời gian:</label>
+        <br />
+        <select class="selectpicker " id="datekind" title="Chọn loại thời gian" data-actions-box="true">
+            <option value="1">Năm Hiện Tại</option>
+            <option value="2">Năm Ngoái</option>
+            <option value="3">5 Năm Trở Lại Đây</option>
+        </select>
+    </div>
+</div>
+<div class="row" style="padding-left:12px;">
+
+</div>
+
+<br />
+<br />
+<br />
+
+
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-body ">
+
+            <Center>
+                <div class="mu-title">
+                    <span class="mu-subtitle">Average Purchase Price</span>
+                    <h2>Giá Chào Mua Trung Bình</h2>
+                    <i class="fa fa-line-chart" style="margin-right:-5px;"></i>
+                    <span class="mu-title-bar"></span>
+                </div>
+            </Center>
+
+            <canvas id="AveragPrice" height="150"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-body ">
+            <Center>
+                <div class="mu-title">
+                    <span class="mu-subtitle">Average Quantity</span>
+                    <h2>Khối Lượng Trung Bình</h2>
+                    <i class="fa fa-line-chart" style="margin-right:-5px;"></i>
+                    <span class="mu-title-bar"></span>
+                </div>
+            </Center>
+            <canvas id="AveragQuantity" height="150"></canvas>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+
+</script>
+

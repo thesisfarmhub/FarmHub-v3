@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--FARMER-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/Assets/HTML/SpicyX/resized-images/Icon/icon-corn.png" type="image/x-icon">
+
+    <!-- Font awesome -->
+    <link href="~/Assets/HTML/SpicyX/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="~/Assets/HTML/SpicyX/css/bootstrap.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="~/Assets/HTML/SpicyX/css/slick.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" type="text/css" href="~/Assets/HTML/SpicyX/css/bootstrap-datepicker.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="~/Assets/HTML/SpicyX/css/jquery.fancybox.css" type="text/css" media="screen" />
+    <!-- Theme color -->
+    <link id="switcher" href="~/Assets/HTML/SpicyX/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main style sheet -->
+    <link href="~/Assets/common/CSS/panel.css" rel="stylesheet" />
+    <link href="~/Assets/HTML/SpicyX/style.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+    <link href="~/Assets/common/CSS/FeedBackCustom.css" rel="stylesheet" />
+
+    <!-- jQuery library -->
+    <script src="~/Assets/HTML/SpicyX/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/Assets/HTML/SpicyX/js/bootstrap.js"></script>
+    <!-- Slick slider -->
+    <script type="text/javascript" src="~/Assets/HTML/SpicyX/js/slick.js"></script>
+    <!-- Counter -->
+    <script type="text/javascript" src="~/Assets/HTML/SpicyX/js/waypoints.js"></script>
+    <script type="text/javascript" src="~/Assets/HTML/SpicyX/js/jquery.counterup.js"></script>
+    <!-- Date Picker -->
+    <script type="text/javascript" src="~/Assets/HTML/SpicyX/js/bootstrap-datepicker.js"></script>
+    <!-- Mixit slider -->
+    <script type="text/javascript" src="~/Assets/HTML/SpicyX/js/jquery.mixitup.js"></script>
+    <!-- Add fancyBox -->
+    <script type="text/javascript" src="~/Assets/HTML/SpicyX/js/jquery.fancybox.pack.js"></script>
+    <script src="~/Assets/common/JS/Numeric.js"></script>
+    <!-- Custom js -->
+    <script src="~/Assets/HTML/SpicyX/js/custom.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <link href="~/Assets/common/CSS/Font-Awesome-all.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+
+    <link href="~/Assets/common/CSS/jquery.feedback_me.css" rel="stylesheet" />
+    <link href="~/Assets/common/CSS/FeedBackCustom.css" rel="stylesheet" />
+    <script src="~/Assets/common/JS/jquery.feedback_me.js"></script>
+    <script src="~/Assets/common/JS/FeedBack.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+</head>
+<body>
+    <!-- Start header section - NAVIGATION BAR-->
+    <header id="mu-header">
+        <nav class="navbar navbar-default mu-main-navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- LOGO -->
+                    <a class="navbar-brand" href="/Home/Index"><img src="~/Assets/HTML/SpicyX/img/logo.png" alt="Logo img"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul id="top-menu" class="nav navbar-nav navbar-right mu-main-nav">
+                        <li><a href="/Farmer/Farmer/Index">TRANG CHỦ</a></li>
+                        <li><a href="/Farmer/Farm/Index">QUẢN LÝ NÔNG TRẠI</a></li>
+
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">GIAO DỊCH<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/Farmer/FarmerOffer/FarmerOfferIndex">Tìm kiếm thỏa thuận </a></li>
+                                <li><a href="/Farmer/FarmerTransaction/FarmerTransactionIndex">Giao dịch đang hoạt đông</a></li>
+                                <li><a href="/Farmer/FarmerTransactionHistory/FarmerTransactionHistoryIndex">Lịch sử giao dịch</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="/Analysist/AnalysistIndex">PHÂN TÍCH & BIỂU ĐỒ</a></li>
+
+                        @{
+                            var session = (UserLoginSession)Session[FarmHub.Common.Constant.USER_SESSION];
+                        }
+
+                        @if (session == null)
+                        {
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">TÀI KHOẢN<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/Register/CreateRegister">ĐĂNG KÝ TÀI KHOẢN</a></li>
+                                    <li><a href="/Login/LoginIndex">ĐĂNG NHẬP</a></li>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">XIN CHÀO @session.UserName<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="@Url.Action("Account","Farmer")">CHỈNH SỬA THÔNG TIN</a></li>
+                                    <li><a href="@Url.Action("Logout","Farmer")">ĐĂNG XUẤT</a></li>
+                                </ul>
+                            </li>
+                        }
+
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+    <!-- End header section -->
+    @RenderBody()
+    <!-- Start Footer -->
+    <footer id="mu-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mu-footer-area">
+                        <div class="mu-footer-social">
+                            <ul style="color:white;">
+                                <li><span class="fas fa-user-friends"></span></li>
+                                <li><h4 style="font-weight:bold;">Nhóm Phát Triển</h4> </li>
+                                <li>Giảng Viên Hướng Dẫn : Ths.Bùi Thị Thanh Tú</li>
+                                <li> Trần Hoàng Long</li>
+                                <li> Phùng Ngô Trọng Nghĩa</li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</body>
+</html>

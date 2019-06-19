@@ -1,0 +1,101 @@
+﻿
+@model Model.DTO.Trader.TraderOfferDTO
+
+
+@{
+    /**/
+
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layouts.cshtml";
+}
+
+<link href="~/Assets/trader/CSS/Offer.css" rel="stylesheet" />
+<link href="~/Assets/common/CSS/nice-select.css" rel="stylesheet" />
+<link href="~/Assets/common/CSS/BeautifulButton.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+
+
+<script src="~/Assets/common/JS/jquery.nice-select.js"></script>
+<script src="~/Assets/common/JS/niceSelectBoxScript.js"></script>
+
+<script src="~/Assets/trader/JS/GuestOffer.js"></script>
+<script src="~/Assets/trader/JS/AdvancedBtn.js"></script>
+<script src="~/Assets/common/JS/OfferValidations.js"></script>
+
+<Center>
+    <div class="mu-title">
+        <span class="mu-subtitle">Offers</span>
+        <h2>Tìm Kiếm Thỏa Thuận </h2>
+        <i class="fa fa-shopping-cart" style="margin-right:-5px;"></i>
+        <span class="mu-title-bar"></span>
+    </div>
+</Center>
+
+<div class="row" style="padding-left:25px;">
+    <div class="col-md-6 ">
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <Center>
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Purchase</span>
+                        <h2>Đơn Đặt Mua</h2>
+                       
+                    </div>
+                </Center>
+
+                <div>
+                    <table id="purchaseOfferTbl" class="table table-striped table-bordered table-hover table-display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Ngày tạo</th>
+                                <th> Thương Lượng</th>
+                                <th>Sản Phẩm</th>
+                                <th>Giống</th>
+                                <th>Khối Lượng</th>
+                                <th>Đơn Vị</th>
+                                <th> Trong Lượng</th>
+                                <th>Đơn Giá <br />(VND/tấn)</th>
+                                <th>Số Đơn</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-6 ">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <Center>
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Sale</span>
+                        <h2>Đơn Đặt Bán</h2>
+                        
+                    </div>
+                </Center>
+                <table id="saleOfferTbl" class="table table-striped table-bordered table-hover" style="width: 100%">
+                    <thead>
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Giống</th>
+                            <th>Nông Trại</th>
+                            <th>Khối Lượng <br/> Còn Lạis</th>
+                            <th>Đơn Vị</th>
+                            <th>Trong Lượng</th>
+                            <th>Đơn Giá <br /> (VND/tấn)</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
