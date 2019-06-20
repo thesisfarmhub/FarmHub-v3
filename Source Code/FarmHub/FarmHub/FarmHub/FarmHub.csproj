@@ -2693,6 +2693,9 @@
     <Content Include="Assets\admin\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Data\Image\Farmer\Base\almond.jpeg" />
+    <Content Include="Data\Image\Farmer\Base\almond1.jpeg" />
+    <Content Include="Data\Image\Farmer\Base\almond2.jpeg" />
+    <Content Include="Data\Image\Farmer\Base\almond3.jpeg" />
     <Content Include="Data\Image\Farmer\Base\apple.jpeg" />
     <Content Include="Data\Image\Farmer\Base\apple1.jpeg" />
     <Content Include="Data\Image\Farmer\Base\apple2.jpeg" />
@@ -2737,6 +2740,9 @@
     <Content Include="Data\Image\Farmer\Base\kohlrabi-bulbs.jpeg" />
     <Content Include="Data\Image\Farmer\Base\lingzhi-mushroom.jpeg" />
     <Content Include="Data\Image\Farmer\Base\mushroom.jpeg" />
+    <Content Include="Data\Image\Farmer\Base\mushrooms1.jpeg" />
+    <Content Include="Data\Image\Farmer\Base\mushrooms2.jpeg" />
+    <Content Include="Data\Image\Farmer\Base\mushrooms3.jpeg" />
     <Content Include="Data\Image\Farmer\Base\orange.jpeg" />
     <Content Include="Data\Image\Farmer\Base\orange1.jpeg" />
     <Content Include="Data\Image\Farmer\Base\orange2.jpeg" />
@@ -2751,6 +2757,9 @@
     <Content Include="Data\Image\Farmer\Base\strawberry2.jpeg" />
     <Content Include="Data\Image\Farmer\Base\strawberry3.jpeg" />
     <Content Include="Data\Image\Farmer\Base\tomato.jpeg" />
+    <Content Include="Data\Image\Farmer\Base\tomato1.jpeg" />
+    <Content Include="Data\Image\Farmer\Base\tomato2.jpeg" />
+    <Content Include="Data\Image\Farmer\Base\tomato3.jpeg" />
     <Content Include="Data\Image\Farmer\Base\water-spinach.jpeg" />
     <Content Include="Data\Image\Farmer\Base\watermelon.jpeg" />
     <Content Include="Data\Image\Farmer\Base\watermelon1.jpeg" />

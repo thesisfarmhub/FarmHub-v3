@@ -398,3 +398,33 @@ C:\Users\ChenLong\Desktop\Thesis Project\FarmHub8\FarmHub8\FarmHub\Model\obj\Deb
 C:\Users\ChenLong\Desktop\Thesis Project\FarmHub8\FarmHub8\FarmHub\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\ChenLong\Desktop\Thesis Project\FarmHub8\FarmHub8\FarmHub\Model\obj\Debug\Model.dll
 C:\Users\ChenLong\Desktop\Thesis Project\FarmHub8\FarmHub8\FarmHub\Model\obj\Debug\Model.pdb
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\Model.dll.config
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\Model.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\Model.pdb
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\Common.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\EntityFramework.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\PagedList.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\PagedList.Mvc.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.WebPages.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.Mvc.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.Razor.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\Common.pdb
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\EntityFramework.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\PagedList.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\PagedList.Mvc.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.WebPages.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.Mvc.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\Microsoft.Web.Infrastructure.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.Razor.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\obj\Debug\Model.dll
+D:\Thesis v3\FarmHub-v3\Source Code\FarmHub\FarmHub\Model\obj\Debug\Model.pdb
